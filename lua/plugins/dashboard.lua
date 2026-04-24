@@ -1,3 +1,13 @@
+-- Define a reusable restore helper
+_G.RestoreSession = function()
+  require("persistence").load()
+end
+
+-- Define a reusable config helper
+_G.OpenConfig = function()
+  require("telescope.builtin").find_files { cwd = vim.fn.stdpath "config" }
+end
+
 return {
   "nvimdev/dashboard-nvim",
   lazy = false, -- As https://github.com/nvimdev/dashboard-nvim/pull/450, dashboard-nvim shouldn't be lazy-loaded to properly handle stdin.
@@ -28,8 +38,8 @@ return {
           { action = "ene | startinsert",                              desc = " New File",        icon = " ", key = "n" },
           { action = 'Telescope oldfiles',                             desc = " Recent Files",    icon = " ", key = "r" },
           { action = 'Telescope live_grep',                            desc = " Find Text",       icon = " ", key = "g" },
-          { action = 'lua require("telescope.builtin").find_files({ cwd = vim.fn.stdpath("config") })',              desc = " Config",          icon = " ", key = "c" },
-          { action = 'lua require("persistence").load()',              desc = " Restore Session", icon = " ", key = "s" },
+          { action = 'lua OpenConfig()',                               desc = " Config",          icon = " ", key = "c" },
+          { action = 'lua RestoreSession()',                           desc = " Restore Session", icon = " ", key = "s" },
           { action = "LazyExtras",                                     desc = " Lazy Extras",     icon = " ", key = "x" },
           { action = "Lazy",                                           desc = " Lazy",            icon = "󰒲 ", key = "l" },
           { action = function() vim.api.nvim_input("<cmd>qa<cr>") end, desc = " Quit",            icon = " ", key = "q" },
