@@ -19,3 +19,6 @@ map("n", "<A-k>", ":m .-2<CR>==", { desc = "Move line up" })
 -- Visual Mode: Move selected block
 map("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
 map("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
+
+vim.keymap.set("n", "<A-n>", ":cnext<CR>", { desc = "Next reference" })
+vim.keymap.set("n", "<A-p>", ":cprev<CR>", { desc = "Prev reference" })
