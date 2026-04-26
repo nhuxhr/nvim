@@ -11,6 +11,7 @@ local options = {
     typescriptreact = { "biome" },
     json = { "biome" },
     jsonc = { "biome" },
+    astro = { "prettierd", "prettier" },
   },
 
   format_on_save = {

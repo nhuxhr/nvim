@@ -55,6 +55,23 @@ return {
   },
 
   {
+    "mason-org/mason.nvim",
+    opts = {
+      ensure_installed = {
+        -- Formatters
+        "stylua", -- Lua formatter
+        "taplo", -- TOML formatter / LSP
+        "biome", -- JS/TS/JSON linter + formatter
+        "prettierd", -- Prettier daemon
+
+        -- Language servers
+        "typescript-language-server", -- TypeScript / JavaScript LSP
+        "astro-language-server", -- Astro LSP
+      },
+    },
+  },
+
+  {
     "mg979/vim-visual-multi",
     lazy = false,
   },
