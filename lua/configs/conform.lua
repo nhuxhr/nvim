@@ -12,6 +12,7 @@ local options = {
     json = { "biome" },
     jsonc = { "biome" },
     astro = { "prettierd", "prettier" },
+    svelte = { "prettierd", "prettier" },
   },
 
   format_on_save = {

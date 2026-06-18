@@ -50,6 +50,7 @@ return {
         "vimdoc",
         "xml",
         "yaml",
+        "svelte",
       },
     },
   },
@@ -67,6 +68,7 @@ return {
         -- Language servers
         "typescript-language-server", -- TypeScript / JavaScript LSP
         "astro-language-server", -- Astro LSP
+        "svelte-language-server", -- Svelte LSP
       },
     },
   },
