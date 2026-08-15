@@ -3,8 +3,8 @@ return {
   lazy = false,
   init = function()
     vim.g.VM_maps = {
-      ["Find Under"] = "<C-j>",
-      ["Find Subword Under"] = "<C-j>",
+      ["Find Under"] = "<C-v>",
+      ["Find Subword Under"] = "<C-v>",
     }
   end,
 }
