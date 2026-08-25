@@ -11,7 +11,7 @@ vim.lsp.config("cssls", {
   },
 })
 
-local servers = { "html", "cssls", "rust_analyzer", "taplo", "ts_ls", "biome", "tailwindcss", "dcmls" }
+local servers = { "html", "cssls", "rust_analyzer", "taplo", "ts_ls", "biome", "tailwindcss" }
 vim.lsp.enable(servers)
 
 -- read :h vim.lsp.config for changing options of lsp servers
